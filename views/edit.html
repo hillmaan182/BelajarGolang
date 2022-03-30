@@ -1,0 +1,35 @@
+{{ define "edit" }}
+  {{ template "header" }}
+    {{ template "menu" }} 
+      <form method="POST" action="update">
+        <div class="content">
+          <div class="container">
+            <h2 class="mb-5">New Users</h2>
+            <div class="table-responsive">
+              <table class="table table-striped custom-table">
+                <tbody>
+                  <tr scope="row">
+                    <td><label> Username </label></td>
+                    <td><input type="text" name="username" placeholder="Type your username" value="{{ .Username }}"  /></td>
+                  </tr>
+                  <tr scope="row">
+                    <td><label> Email </label></td>
+                    <td><input type="text" name="email" placeholder="Type your Email" value="{{ .Email }}"  /></td>
+                  </tr>
+                  <tr scope="row">
+                    <td><label> Password </label></td>
+                    <td><input type="password" name="password" value="{{ .Password }}"  /></td>
+                  </tr>
+                  <tr>
+                    <td colspan="2">
+                      <input type="submit" value="Update user" />
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </form>
+  {{ template "footer" }}
+{{ end }}

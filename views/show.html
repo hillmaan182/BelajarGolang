@@ -1,0 +1,19 @@
+{{ define "show" }}
+  {{ template "header" }}
+    {{ template "menu"  }}
+    <div class="content">
+      <div class="container">
+        <h2 class="mb-5">Show Users</h2>
+        <div class="table-responsive">
+          <table class="table table-striped custom-table">
+            <tbody><tr scope="row">
+              <td><p>Username: {{ .Username }}</p> </td>
+              <td><p>Email:  {{ .Email }}</p></td>
+              <td><a href="/edit?username={{ .Username }}">Edit</a></td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  {{ template "footer" }}
+{{ end }}
